@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+  background: linear-gradient(135deg, #8e4e91, #160bb7, #a874a8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+#wrapper{
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    width: 95%;
+    max-width: 500px;
+    box-sizing: border-box;
+    border: 2px solid white;
+    background-color: transparent;
+    backdrop-filter: blur(100px);
+}
+
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#guessField{
+    height: 20px;
+    width: 200px;
+}
+
+#subt{
+    padding: 3px;
+    border: 1px solid;
+}
+
+h1{
+    width: 95%;
+    text-align: center;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    color:#edfe00 ;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    /* border: 2px solid;
+    border-radius: 15px; */
+    font-weight: bolder;
+    font-style: normal;
+    animation: colorChange 2s infinite alternate;
+}
+
+@keyframes colorChange {
+  0%   { color: #ddff00; } /* Hot Pink */
+  25%  { color: #00000000; } /* Bright Yellow */
+  50% { color: #edfe00; } /* Aqua Neon */
+  75% { color: #00000000; } /* Aqua Neon */
+  100% { color: #edfe00; } /* Aqua Neon */
+}
+
+p{
+    margin: 4px;
+    font-weight: bold;
+    height: 10%;
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.3rem;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#guess{
+    font-size: xx-large;
+    font-weight: bold;
+    color: #edfe00;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#subt{
+    background: linear-gradient(135deg, #ff0303c3, #ff0000);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border: none;
+    font-size: medium;
+    height: 30%;
+    border-radius: 10px;
+}
+#subt:hover{
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+}
+#subt:active{
+    transform: scale(0.8);
+    transition-duration: 0.5s;
+}
+#guessField{
+    padding: 5px;
+    border-radius: 5px;
+    border: transparent;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+.resultParas{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.resultParas p{
+    padding-bottom: 10px;
+    color: #fdffff;
+}
+
+.lowOrHi{
+    color:#00fe48 ;
+    font-size: 1.1rem;
+}
+
+.msg{
+    color:#00fe48 ;
+    font-size: 1.3rem;
+}
+
+.guesses{
+    color: #edfe00;
+}
+
+.lastResult{
+    color: #edfe00;
+}
+
+#newGame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  margin-top: 0px;
+  border: 2px solid white;
+  border-radius: 12px;   /* makes corners rounded */
+  background: linear-gradient(135deg, #ff00cc, #3333ff);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#newGame:hover {
+  background: linear-gradient(135deg, #ff3399, #0066ff);
+  transform: scale(1.05);
+}

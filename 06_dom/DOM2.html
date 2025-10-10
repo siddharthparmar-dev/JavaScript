@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+</head>
+<body style="background-color: rgb(84, 84, 161);">
+    <div class="week">
+        <div class="days">Mon</div>
+        <div class="days">Tue</div>
+        <div class="days">Wed</div>
+        <div class="days">Thu</div>
+        <div class="days">Fri</div>
+        <div class="days">Sat</div>
+        <div class="days">Sun</div>
+    </div>
+</body>
+<script>
+    const week = document.querySelector(".week")
+    console.log(week);
+    console.log(week.children);
+    console.log(week.children[5].innerHTML);
+
+    for (let i = 0; i < week.children.length; i++) {
+        console.log(week.children[i].innerHTML);
+        
+        
+    }
+
+    week.children[1].style.color = "orange"
+    week.children[1].setAttribute("class","sid")
+    console.log(week.firstElementChild);
+    //it will return firstElement of the children class
+    console.log(week.lastElementChild);
+    //it will return lastElement of the children class
+    const dayOne = document.querySelector(".days")
+    console.log(dayOne);
+    console.log(dayOne.parentElement);
+    //it will return parentElement of the children class
+    console.log("Nodes: ", week.childNodes );
+    //it will return a nodelist of childNodes
+
+
+//     NodeList(15) [text, div.days, text, div.sid, text, div.days, text, div.days, text, div.days, text, div.days, text, div.days, text]
+// 0: text
+// 1: div.days
+// 2: text
+// 3: div.sid
+// 4: text
+// 5: div.days
+// 6: text
+// 7: div.days
+// 8: text
+// 9: div.days
+// 10:text
+// 11: div.days
+// 12: text
+// 13: div.days
+// 14: text
+
+// it has returned a set of node list but it counts everything like if we press enter basically break the line
+// so it will consider it also as a childnode
+</script>
+</html>

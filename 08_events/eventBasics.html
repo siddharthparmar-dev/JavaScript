@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("click is working")
+    //attachEvent()
+    //jquery - onEventListener
+    // this were the old methods used at the time of internet explorer and jquery
+    // }
+    // but this method is not used to much because it not gives us all the features
+    // instead of this we use addEventListener because it provides us more features 
+    // document.getElementById("owl").addEventListener("click",function(event){
+    //     console.log("clicked on owl");
+    // })
+    // event propogation
+    // why this false is added after function
+
+    // this is called event propogation which has two types
+    // 1. event bubbling     2. event capturing
+
+    // in IT market default way is used which is false as default value 
+    // and it is also called as event Bubbling
+
+    //  document.getElementById("images").addEventListener("click",function(event){
+    //     console.log("clicked inside the ul");
+    // })
+    // document.getElementById("owl").addEventListener("click",function(event){
+    //     console.log("clicked on owl");
+    // })
+
+    // when we click on owl it will print 
+    // clicked on owl
+    // clicked inside the ul 
+
+    // this is called event propogation and bubbling mode , by default it is false i.e in bubbling mode
+    // but there is one more mode which is called capturing mode
+
+    //    document.getElementById("images").addEventListener("click",function(event){
+    //     console.log("clicked inside the ul");
+    // },true)
+    // document.getElementById("owl").addEventListener("click",function(event){
+    //     console.log("clicked on owl");
+    // },true)
+
+    //now when we click on owl it will print 
+    // clicked inside the ul
+    // clicked on owl
+
+    // basically in event bubbling mode basically default mode 
+    // it goes from inside to outside
+
+    // but in event capturing mode or we can say true 
+    // it goes from outside to inside 
+
+    // stopPropogation basically this method is used when we want that propogation dont happen 
+    // basically bubbling will stop
+         document.getElementById("images").addEventListener("click",function(event){
+        console.log("clicked inside the ul");
+    })
+    document.getElementById("owl").addEventListener("click",function(event){
+        console.log("clicked on owl");
+        event.stopPropagation()
+    })
+
+    // preventDefault()
+    // basically it stops the event functionality when clicked
+
+    document.getElementById('google').addEventListener("click",function(event){
+        console.log('clicked on google');
+        event.preventDefault()
+        
+    })
+</script>
+</html>

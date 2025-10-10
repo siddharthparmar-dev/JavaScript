@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intervals</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <button id="stop">STOP</button>
+</body>
+<script>
+   const newFnc  = function(){
+    console.log('sid');
+    }
+
+    const changeh1 = function(){
+    document.querySelector('h1').innerHTML = "hii world"
+    }
+
+    // setTimeout() basically hum time set krte hai ki ye function kitne time ke baad run hoga 
+    setTimeout(newFnc,3000)
+    const changeme = setTimeout(changeh1,3000)
+
+    //clearTimeout() ye basically setTimeout ko clear kr dega aur wo run hi nhi hoga 
+    // clearTimeout ko hume reference dena hoga ki hume konsa setInterval stop krna hai 
+
+    // clearTimeout(changeme)
+    // we can also add it on any event or button
+
+    const btn = document.querySelector('#stop')
+    btn.addEventListener('click',function(){
+        clearTimeout(changeme)
+    })
+</script>
+</html>
+  

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        .main-box{
+            height: 50vh;
+            width: 50vw;
+            border: 2px solid ;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+           align-items: center;
+            background: linear-gradient(135deg,rgb(181, 141, 240),rgb(86, 55, 122),rgb(254, 159, 159));
+        }
+        img{
+            height: 150px;
+            width: 150px;
+            margin: 2px;
+        }
+        span{
+            margin: 2px;
+            height: 50px;
+            width: 90%;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-box">
+        <h1 style="color: white;">Details</h1>
+       <img src="" alt="">
+       <span></span>
+       <button class="press">print</button>
+    </div>
+</body>
+<script>
+    const apiurl = new XMLHttpRequest
+    apiurl.open('get','https://api.github.com/users/hiteshchoudhary')
+    apiurl.onreadystatechange = function(){
+            if (apiurl.readyState === 4) {
+                const data = JSON.parse(this.responseText)
+                const pic = data.avatar_url
+                const followers = data.followers
+                const btn = document.querySelector('.press')
+                btn.addEventListener('click',function(){
+
+                    const photo = document.querySelector('img')
+                    const flwr = document.querySelector('span')
+                    flwr.innerHTML = `Total followers are : ${followers}`
+                    photo.src = pic
+                })
+                
+                
+                
+            }
+    }
+    
+    apiurl.send()
+    
+</script>
+</html>

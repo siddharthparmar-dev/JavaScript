@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML http request</title>
+</head>
+<body>
+    <!-- xml http request was used in earlier time for requesting API but nowdays devs use fetch API . -->
+    <!-- ready state property return the state of xml http request and tell us that at which it is  -->
+     <!-- totally there are 5 states  -->
+      <!-- Value	State	Description
+            0	UNSENT	Client has been created. open() not called yet.
+            1	OPENED	open() has been called.
+            2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+            3	LOADING	Downloading; responseText holds partial data.
+            4	DONE	The operation is complete. -->
+</body>         
+<script>
+    const xhrRequest = new XMLHttpRequest()
+    // open state : it will start process of sending request 
+    // in this open we have to pass method like get put or post and string basically url or data
+    xhrRequest.open('get','https://api.github.com/users/hiteshchoudhary')
+    // open bs request create kr dega 
+    // request send krne ke liye hum send() ka use krenge 
+    
+    // readystate() this  will tell us the state of xml http request
+    // console.log(xhrRequest.readyState);
+
+    // onreadystatechange this help when we want to put some operation on every state change 
+    // so we will simply console log all states 
+
+    xhrRequest.onreadystatechange = function(){
+           console.log(xhrRequest.readyState);
+           if(xhrRequest.readyState === 4){
+           const data = JSON.parse(this.responseText)
+           console.log(data.followers);  // o/p : undefined 
+
+           // jab bhi hamare pass output url se aata hai toh woh  most of the time string ke form mei aata hai 
+           // toh hume use bascially parse krna pdta hai JSON format mei 
+
+           
+            
+           }
+
+    }
+    
+    xhrRequest.send()
+</script>   
+</html>
+
+// JSON.parse : it basically converts the data from url in JSON format and because url always returns data in string form
+
+// ********************* NOTES ********************
+
+// XMLHttpRequest ek tarika hai api ko call krne ka 
+// jo pehle kafi use hota tha but fetch api ke aane ke baad kam use hota hai 
+// XMLHttpRequest mei 5 states hai jinse hote hue last m api call hoti hai 
+// XMLHttpRequest.open() isse api ko call krne ka process open hota hai 
+// open ke andar hum do chize pass krte hai 1. method aur 2. string
+// method : basically get post put y sb 
+// sting ke andar hum url ya apna data pass krte hai 
+//XMLHttpRequest.send() isse api call ho jati hai aur ab hum usse access kr skte hai 
+// readyState ye basically hume state btata hai ek XMLHttpRequest konse state pe hai. 
+// onReadyStateChange hume har state ke pe kuch function lagane ke liye use hoti hai 
+// jaise if(XMLHttpRequest.readyState === 4){
+    perform operation
+}
+
+// this.responseText se hum api  ko print kr skte hai
+// but single value access krne ke liye hume iss this.responseText ko convert krna pdta hai JSON m json.parse ke through
+
+

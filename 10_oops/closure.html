@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="orange">orange</button>    
+    <button id="green">green</button>    
+</body>
+<script>
+    function newfnc(){
+        const userName = "rockstar"
+        function displayFnc(){
+            console.log(userName);            
+        }
+        displayFnc()
+    }
+
+    const makeFnc = newfnc();
+    // yha pe humne newfnc() ko call kiya hai newfnc() ke andar displayFnc() bhi h 
+    // displayFnc() ke andr humne newfnc() ke variable ka reference liya hua hai 
+    // displayFnc() ko newfnc() ke pura lexical scope ko share krta hai naki sirf executional context ko
+    newfnc()
+
+    // document.getElementById("orange").onclick = function(){
+    //     document.body.style.backgroundColor = 'orange'
+    // }
+    // document.getElementById("green").onclick = function(){
+    //     document.body.style.backgroundColor = 'green'
+    // }
+
+    // jyada buttons ke liye hum barbar mhi banyenge
+    function clickHandler(color){
+          return function(){            // hume clickHandler() ke andar return bnana pdega otherwise click p direct run ho jayega 
+            document.body.style.backgroundColor = `${color}`
+          }
+    }
+    document.getElementById("orange").onclick = clickHandler("orange")  // humne yha pe clickHandler() ka refernce diya 
+    document.getElementById("green").onclick = clickHandler("green")
+    // return function nhi hoga toh bina click ke hi function call ho jayega
+</script>
+</html>

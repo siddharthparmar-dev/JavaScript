@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+     font-family: "Rowdies", sans-serif;
+     font-weight: 100;
+}
+body{
+  background: linear-gradient( #4077e7f3, #bebeff);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid rgba(0, 0, 0, 0.238);
+    border-radius: 10px;
+    width: 95%;
+    max-width: 400px;
+    box-sizing: border-box;
+     background-color: transparent;
+    backdrop-filter: blur(100px);
+}
+
+.main-content h1{
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(#00ba3e,#000000);
+    width: 95%;
+    border-radius: 5px;
+    border: 2px solid rgb(2, 154, 38);
+}
+
+h1 img{
+    height: 30px;
+    width: 50px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.main-content form{
+    margin-top: 20px;
+}
+
+.main-content form label{
+    color: #000000;
+    margin: 4px;
+}
+
+.main-content form p{
+    margin: 10px;
+    color: #142402;
+}
+
+label{
+    display: flex;
+    justify-content: left;
+    font-size: large;
+}
+
+#name{
+    text-transform: uppercase;
+}
+
+input{
+    border-radius: 5px;
+    border: 2px solid black;
+    height: 30px;
+    text-align: center;
+    font-size: medium;
+}
+input::placeholder{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    text-transform: none;
+}
+
+button{
+    background: linear-gradient(#f73232,#000000);
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    font-size: large;
+}
+
+button:hover{
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+    border: 2px solid rgb(255, 255, 255);
+    background: linear-gradient(#32f75d,#000000);
+}
+
+button:active{
+    transform: scale(0.8);
+}
+
+#result{
+    color: #000000;   
+    font-size: larger;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+#data{
+    color: #000000;
+    font-size: larger;
+    padding: 8px;
+     text-transform: capitalize;
+}
+
+h3{
+    margin: 10px;
+    text-decoration: underline;
+}
+
+#weight-guide{
+    padding: 15px;
+    width: 90%;
+    background: linear-gradient(navy,#000000);
+    color: #fff;
+    border: 2px solid rgba(251, 251, 251, 0);
+    border-radius: 10px;
+}
+
+#weight-guide p{
+    padding: 5px;
+}

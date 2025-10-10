@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="unordered">
+        <li>BMW</li>
+    </ul>
+    
+    <script>
+    //     const main = document.createElement("div")
+    //     console.log(main);
+    //     const unl = document.createElement("ul")
+    //     main.appendChild(unl)
+    // //     const list = document.createElement("li")
+    // //     unl.appendChild(list)
+    // //     list.innerText = "hello"
+    //  const arr = ["hii","hello","welcome","bye"]
+    //  let i = 0
+    //     while (i < arr.length) {
+    //         const divi = document.createElement("div")
+    //         divi.innerText = arr[i]
+    //         unl.appendChild(divi) 
+    //         i = i+1
+    //     } 
+
+        function createli(language){
+            const list = document.createElement("li")
+            list.innerText = language
+            document.querySelector("ul").appendChild(list)
+        }
+        // this is not considered optimised way of creating o adding an element
+
+        createli("mercedes")
+        createli("cadilac")
+        createli("cadilac")
+
+        // for big projects we should use optimised method
+        function optilist(lang){
+            const list = document.createElement("li")
+           list.appendChild(document.createTextNode(lang))
+           document.querySelector(".unordered").appendChild(list)
+        }
+        optilist("Hii")
+
+
+        // how to edit element 
+        const chngsec = document.querySelector("li:nth-child(2)")
+        chngsec.innerHTML = "sid"
+        // optimised way
+        const newli = document.createElement("li")
+        newli.textContent = "bgmi"
+        chngsec.replaceWith(newli)
+        // how to remove element
+        const rmv = document.querySelector("li:last-child")
+        rmv.remove()
+     </script>
+</body>
+</html>
