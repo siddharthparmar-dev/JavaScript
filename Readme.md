@@ -87,7 +87,7 @@ Users can create, view, and delete notes — all stored persistently using **loc
 ## 📫 Connect with Me
 
 - **GitHub:** [Sidcodesit](https://github.com/Sidcodesit)  
-- *(Add LinkedIn or Portfolio link here if available)*  
+- **LinkedIn:** [Siddharth Parmar](https://www.linkedin.com/in/siddharth-parmar-34a449370)
 
 ---
 
