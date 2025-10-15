@@ -88,8 +88,8 @@ class user {
 
 class admin extends user {                           // extends se hum ek class ko dusre se connect krte hai 
     constructor(username,email,password) {
-        super(username)   // super() jis class ko humne extend kiya hai hume uss class ke constructor ke andar jake 
-        this.email = email                           // properties ko le aata hai 
+         super(username)   // super() jis class ko humne extend kiya hai hume uss class ke constructor ke andar jake 
+         this.email = email                           // properties ko le aata hai 
         this.password = password
     }
 

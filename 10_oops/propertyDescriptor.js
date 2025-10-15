@@ -85,15 +85,6 @@ console.log(Math.PI);
 
 
 
-const arr = [1,2,9,4,5,4,5,7,9,3,5]
-
-// const arr2 = arr.slice(0,4)
-// console.log(arr2);
-
-const arr3 = arr.
-console.log(arr3);
-console.log(arr);
-
 
 
 
