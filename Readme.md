@@ -33,7 +33,7 @@ Each folder in this repo represents a specific topic or phase of my learning.
 ┗ 📁 PROJECT/NOTENEST
 
 
-Each folder includes code samples, exercises, or projects related to its topic.
+Each folder includes code samples, exercises related to its topic.
 
 ---
 
