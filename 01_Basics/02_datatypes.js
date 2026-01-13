@@ -34,4 +34,6 @@ console.log(typeof 18)
 
    #Non-primitive Data types
    1.object
+   2.function
+   3.Array
 */
