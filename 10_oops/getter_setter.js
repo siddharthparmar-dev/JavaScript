@@ -19,7 +19,6 @@
 // set(){} jo value hume get() se mili hai usko hum apne variable m set kr denge 
 
 // example
-
 // humne get password(){} banaya isse hume user class jb bhi use hogi toh wha se password mil jayega 
 // get(){} ke andar humne uss value ko return kra h this._password ke through 
 // _password '_' underscore isliye use kiya hai kyuki hum this.password ko pehle hi declare kar chuke hai 
